@@ -88,43 +88,56 @@ function Navbar() {
 // ─── Hero ──────────────────────────────────────────────────────────────────────
 function Hero() {
   return (
-    <section id="hero" className="relative h-screen min-h-[620px] flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative h-screen min-h-[620px] flex items-end overflow-hidden">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/sfondo-hero.jpg"
         alt="Sala Ffure allestita"
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
+      {/* Gradient: strong at bottom, light at top */}
       <div className="absolute inset-0"
-           style={{ background: "linear-gradient(135deg,rgba(28,25,23,0.78) 0%,rgba(160,124,58,0.55) 40%,rgba(201,164,101,0.45) 65%,rgba(245,166,35,0.30) 100%)" }} />
+           style={{ background: "linear-gradient(to top, rgba(28,25,23,0.95) 0%, rgba(28,25,23,0.5) 45%, rgba(28,25,23,0.1) 100%)" }} />
+      {/* Thin gold line at top */}
+      <div className="absolute top-0 left-0 right-0 h-[3px]"
+           style={{ background: "linear-gradient(90deg, #C9A465, #E2C27D, #A07C3A)" }} />
 
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo.png" alt="Ffure" className="h-32 md:h-44 w-auto mx-auto mb-6 drop-shadow-2xl" />
-        <h1 className="font-display text-white leading-none mb-4"
-            style={{ fontSize: "clamp(3.5rem,10vw,8rem)", textShadow: "0 4px 32px rgba(0,0,0,0.4)" }}>
-          LA TUA FESTA<br /><span className="gold-text">INIZIA QUI</span>
+      {/* Content — bottom left */}
+      <div className="relative z-10 px-8 lg:px-20 pb-16 md:pb-24 w-full max-w-4xl">
+        <span className="block text-xs font-bold tracking-[0.3em] uppercase mb-5"
+              style={{ color: "rgba(201,164,101,0.85)" }}>
+          Sala per eventi &amp; conferenze
+        </span>
+        <h1 className="font-display text-white leading-none mb-6"
+            style={{ fontSize: "clamp(4rem,11vw,9.5rem)", textShadow: "0 4px 40px rgba(0,0,0,0.5)" }}>
+          LA TUA<br />FESTA<br /><span className="gold-text">INIZIA QUI</span>
         </h1>
-        <p className="text-white/85 text-lg md:text-xl font-light mb-10 max-w-xl mx-auto">
-          Compleanni · Battesimi · Feste a tema · Conferenze
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex items-center gap-5 mb-10">
+          <div className="h-px w-14 shrink-0" style={{ backgroundColor: "#C9A465" }} />
+          <p className="text-white/65 text-base font-light tracking-wide">
+            Compleanni · Feste a tema · Conferenze
+          </p>
+        </div>
+        <div className="flex flex-col sm:flex-row gap-4">
           <a href="#contact"
-             className="inline-block font-extrabold px-10 py-4 rounded-full text-sm tracking-widest uppercase shadow-2xl cursor-pointer transition-colors duration-200"
+             className="inline-block font-extrabold px-10 py-4 rounded-full text-xs tracking-widest uppercase shadow-2xl cursor-pointer transition-colors duration-200 hover:opacity-90"
              style={{ backgroundColor: "#C9A465", color: "#1C1917" }}>
             Richiedi un preventivo
           </a>
           <a href="#gallery"
-             className="inline-block border-2 border-white text-white font-bold px-10 py-4 rounded-full text-sm tracking-widest uppercase hover:bg-white hover:text-[#1C1917] transition-colors duration-200 cursor-pointer">
+             className="inline-block border border-white/40 text-white/80 font-bold px-10 py-4 rounded-full text-xs tracking-widest uppercase hover:border-white hover:text-white transition-colors duration-200 cursor-pointer">
             Vedi la galleria
           </a>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bounce-y" aria-hidden="true">
-        <svg className="w-6 h-6" fill="none" stroke="#C9A465" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
+      {/* Scroll indicator — bottom right */}
+      <div className="absolute bottom-10 right-8 z-10 flex flex-col items-center gap-3" aria-hidden="true">
+        <span className="text-white/30 text-[0.6rem] font-bold tracking-[0.2em] uppercase"
+              style={{ writingMode: "vertical-rl", letterSpacing: "0.25em" }}>
+          Scorri
+        </span>
+        <div className="w-px h-10" style={{ backgroundColor: "rgba(201,164,101,0.4)" }} />
       </div>
     </section>
   );
