@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import ImmersiveScrollGallery from "@/components/ui/immersive-scroll-gallery";
-import { ImageGallery } from "@/components/ui/image-gallery";
+import { Carousel3D } from "@/components/ui/carousel-3d";
 
 
 // ─── Navbar ────────────────────────────────────────────────────────────────────
@@ -286,10 +286,10 @@ function Services() {
 // ─── Gallery ───────────────────────────────────────────────────────────────────
 function Gallery() {
   return (
-    <section id="gallery" className="py-24 md:py-28 px-6 lg:px-16 bg-white overflow-hidden">
-      <div className="max-w-5xl mx-auto">
+    <section id="gallery" className="py-24 md:py-28 bg-white overflow-hidden">
+      <div className="max-w-5xl mx-auto px-6 lg:px-16 mb-14">
         <motion.div
-          className="text-center mb-12"
+          className="text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -308,8 +308,8 @@ function Gallery() {
             LA NOSTRA <span className="gold-text">GALLERIA</span>
           </h2>
         </motion.div>
-        <ImageGallery />
       </div>
+      <Carousel3D />
     </section>
   );
 }
