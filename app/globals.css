@@ -100,9 +100,11 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body, system-ui, sans-serif);
+    overflow-x: hidden;
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 }
 

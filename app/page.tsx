@@ -182,11 +182,11 @@ function About() {
           <img src="/eventi/SnapInsta.to_671244629_17892159366453132_3480184015416513213_n (1).jpg"
                alt="Sala Ffure allestita"
                className="relative z-10 w-full object-cover object-center rounded-2xl shadow-2xl"
-               style={{ height: "480px" }} />
-          <div className="absolute -bottom-5 -right-5 z-20 rounded-2xl px-6 py-4 shadow-xl"
+               style={{ height: "clamp(280px, 50vw, 480px)" }} />
+          <div className="absolute bottom-4 right-4 md:-bottom-5 md:-right-5 z-20 rounded-2xl px-5 py-3 shadow-xl"
                style={{ backgroundColor: "#C9A465", color: "#1C1917" }}>
-            <p className="font-display text-3xl leading-none">SALA</p>
-            <p className="font-display text-3xl leading-none">EVENTI</p>
+            <p className="font-display text-2xl md:text-3xl leading-none">SALA</p>
+            <p className="font-display text-2xl md:text-3xl leading-none">EVENTI</p>
             <p className="text-xs font-bold mt-1 opacity-70 tracking-widest">& CONFERENZE</p>
           </div>
         </div>
