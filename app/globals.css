@@ -140,10 +140,17 @@
   display: grid;
   overflow: hidden;
   perspective: 35em;
-  -webkit-mask: linear-gradient(90deg, #0000, red 20% 80%, #0000);
-  mask: linear-gradient(90deg, #0000, red 20% 80%, #0000);
+  -webkit-mask: linear-gradient(90deg, #0000, red 15% 85%, #0000);
+  mask: linear-gradient(90deg, #0000, red 15% 85%, #0000);
   width: 100%;
-  height: 30em;
+  height: 26em;
+}
+
+@media (max-width: 640px) {
+  .c3d-scene {
+    perspective: 22em;
+    height: 20em;
+  }
 }
 
 .c3d-ring {
@@ -154,11 +161,12 @@
 }
 
 @keyframes c3d-ry {
-  to { rotate: y 1turn; }
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
 }
 
 .c3d-card {
-  --w: clamp(12em, 26vw, 17.5em);
+  --w: clamp(8em, 22vw, 17.5em);
   --ba: calc(1turn / var(--n));
   grid-area: 1 / 1;
   width: var(--w);

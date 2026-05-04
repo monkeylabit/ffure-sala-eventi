@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import ImmersiveScrollGallery from "@/components/ui/immersive-scroll-gallery";
 import { Carousel3D } from "@/components/ui/carousel-3d";
+import ImmersiveScrollGallery from "@/components/ui/immersive-scroll-gallery";
 
 
 // ─── Navbar ────────────────────────────────────────────────────────────────────
@@ -286,7 +286,7 @@ function Services() {
 // ─── Gallery ───────────────────────────────────────────────────────────────────
 function Gallery() {
   return (
-    <section id="gallery" className="py-24 md:py-28 bg-white overflow-hidden">
+    <section id="gallery" className="py-24 md:py-28 bg-white">
       <div className="max-w-5xl mx-auto px-6 lg:px-16 mb-14">
         <motion.div
           className="text-center"
@@ -482,21 +482,7 @@ export default function Home() {
       <Hero />
       <Numbers />
       <About />
-
-      {/* ── Immersive scroll animation ── */}
-      <section className="bg-white">
-        <div className="text-center pt-24 pb-0 px-6">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-5"
-                style={{ background: "linear-gradient(90deg,#C9A465,#F0C97A)", color: "#1C1917" }}>
-            Scopri i nostri eventi
-          </span>
-          <h2 className="font-display text-[#1C1917] leading-tight"
-              style={{ fontSize: "clamp(3rem,7vw,5.5rem)" }}>
-            SCORRI PER <span className="gold-text">SCOPRIRE</span>
-          </h2>
-        </div>
-        <ImmersiveScrollGallery />
-      </section>
+      <ImmersiveScrollGallery />
 
       <Services />
       <Gallery />
